@@ -1,13 +1,19 @@
+import { useState } from "react"
+
 function SupplyCard() {
 
-  // HINT: the className attribute is there for a reason...
+  const [ strike, setStrike ] = useState("")
+
+  function handleStrike () {
+    setStrike( "strikethrough" )
+  }
 
   return (
     <div className="supply-card">
 
-      <span className={""}>✏️ Item Name goes here</span>
+      <span className={strike}>✏️ Item Name goes here</span>
 
-      <button>Buy</button>
+      <button onClick={handleStrike}>Buy</button>
 
     </div>
   )
