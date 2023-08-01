@@ -4,6 +4,7 @@ function DaysCounter() {
 
   const [ numDays, setNumDays ] = useState( 7 )
 
+  // Decrease days to start school
   function handleDays () {
    setNumDays(numDays - 1)
   }
